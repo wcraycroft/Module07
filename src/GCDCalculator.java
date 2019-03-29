@@ -1,3 +1,23 @@
+/* GCDCalculator.java
+ * Author:  William Craycroft
+ * Module:  7
+ * Project: Lab 7
+ * Problem Statement: This program takes two positive integers from the user and calculated the Greatest Common Divisor
+ *      of those two integers.
+ *
+ * Algorithm / Plan:
+ *      1. Prompt user for two positive integers
+ *      2. Recursively calculate GCD for integers A and B
+ *          If B is 0, return A as the GCD
+ *          Else, the method calls itself to test the GCD of B and (A % B)
+ *      3. Iteratively calculate GCD for integers A and B
+ *          If B is not 0, set B equals to A % B and set A equals to B's original value
+ *          Repeat previous step until B is equal to 0
+ *          Return A as GCD
+ *      4. Output to console the result of both the recursive and iterative methods.
+ *      5. Repeat steps 1-4 until the user enters "-1".
+ */
+
 import java.util.Scanner;
 
 public class GCDCalculator {

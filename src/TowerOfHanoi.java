@@ -1,3 +1,24 @@
+/* TowerOfHanoi.java
+ * Author:  William Craycroft
+ * Module:  7
+ * Project: Homework 7, Project 3
+ * Problem Statement: This program uses a recursive method to calculate the time in months it will take to pay off a loan.
+ *
+ * Algorithm / Plan:
+ *      1. Print values for first test case
+ *      2. Recursively calculate the months until payoff
+ *          Instantiate months counter and total interest sum
+ *          If outstanding balance <= 0, return months
+ *          Calculate monthly interest amount = annual rate / 12 * loan amount
+ *          If monthly interest amount > monthly payment, return -1 and display negative amortization error message
+ *          Increment months by 1
+ *          Calculate new outstanding balance = balance + interest amount - monthly payment
+ *          Add monthly interest to sum
+ *          Call method recursively with new outstanding balance
+ *      3. Output formatted loan information to user.
+ *      4. Repeat step 1 - 3 for test cases 2 and 3.
+ */
+
 import java.util.Scanner;
 
 public class TowerOfHanoi {

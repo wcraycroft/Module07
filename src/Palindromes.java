@@ -1,3 +1,27 @@
+/* Palindromes.java
+ * Author:  William Craycroft
+ * Module:  7
+ * Project: Lab 7
+ * Problem Statement: This program takes in a String input from the user and determines if that String is a palindrome.
+ *
+ * Algorithm / Plan:
+ *      1. Prompt user for a word, phrase or sentence.
+ *      2. Replace all non-alphabetical character and spaces from input String
+ *      3. Set input String to lower case
+ *      4. Recursively test if String is palindrome
+ *          If String length is 1, return true.
+ *          Else, test if first and last characters of the String match.
+ *          If true, remove first and last character from String and repeat Step 4.
+ *          Else, return false.
+ *      5. Iteratively test if String is a palindrome
+ *          Loop through first half of String
+ *          For each character, test if it matches its opposing counterpart in second half of String
+ *          If false, return false
+ *          After loop, return true
+ *      6. Output to console the result of both the recursive and iterative methods.
+ *      7. Repeat steps 1-6 until the user enters "quit".
+ */
+
 import java.util.Scanner;
 
 public class Palindromes {

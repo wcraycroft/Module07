@@ -1,3 +1,25 @@
+/* DecimalToBinary.java
+ * Author:  William Craycroft
+ * Module:  7
+ * Project: Lab 7
+ * Problem Statement: This program takes in a positive integer from the user and converts it to binary (as a String).
+ *
+ * Algorithm / Plan:
+ *      1. Prompt user for two positive integers
+ *      2. Recursively convert integer to binary String
+ *          If integer / 2 (integer division) is equal to 0, append the remainder to the binary String
+ *              Return the string
+ *          Else, the method calls itself with a parameter of integer / 2
+ *              Append the remainder to the binary String and return the String
+ *      3. Iteratively convert integer to binary String
+ *          If integer / 2 is not equals to 0, add remainder to start of binary String
+ *          Divide integer by 2
+ *          Repeat last 2 step until integer / 2 is equals to 0
+ *          Return binary String
+ *      4. Output to console the result of both the recursive and iterative methods.
+ *      5. Repeat steps 1-4 until the user enters "-1".
+ */
+
 import java.util.Scanner;
 
 public class DecimalToBinary {

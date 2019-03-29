@@ -1,3 +1,30 @@
+/* BinaryToDecimal.java
+ * Author:  William Craycroft
+ * Module:  7
+ * Project: Lab 7
+ * Problem Statement: This program takes in a String representing a binary number and converts it to a decimal (integer).
+ *
+ * Algorithm / Plan:
+ *      1. Prompt user for two positive integers
+ *      2. Recursively convert integer to binary String
+ *          Instantiate decimal sum at 0
+ *          If binary String length is equals to 1,
+ *              Double decimal sum and add binary character as integer
+ *              Return decimal sum
+ *          Else,
+ *              Method calls itself with a parameter of current decimal sum * 2 + first binary character
+ *              Remove first character from binary String
+ *              Return decimal sum
+ *      3. Iteratively convert integer to binary String
+ *          Instantiate decimal sum at 0
+ *          While binary String is not empty...
+ *              Double decimal sum and add first binary character as integer
+ *              Remove first character from binary string
+ *          Once binary String is empty, return decimal sum
+ *      4. Output to console the result of both the recursive and iterative methods.
+ *      5. Repeat steps 1-4 until the user enters "-1".
+ */
+
 import java.util.Scanner;
 
 public class BinaryToDecimal {

@@ -13,8 +13,12 @@ public class GCDCalculator {
         // Start of input loop
         while(true) {
 
-            System.out.print("Please enter two positive numbers (e.g 17 51): ");
+            System.out.print("Please enter two positive whole numbers (or -1 to quit): ");
             numberA = keyboard.nextInt();
+            // Check for exit prompt
+            if (numberA == -1)
+                break;
+
             numberB = keyboard.nextInt();
 
             // Output GCDs calculated with both methods
@@ -22,6 +26,9 @@ public class GCDCalculator {
             System.out.println("GCD calculated iteratively: " + iterativelyCalculateGCD(numberA, numberB));
 
         }
+
+        keyboard.close();
+        System.out.print("Goodbye!");
 
     }
 

@@ -16,12 +16,19 @@ public class TowerOfHanoi {
             System.out.print("Enter a number of pegs (-1 to quit): ");
             numberOfDisks = keyboard.nextInt();
 
+            // Check for exit prompt
+            if (numberOfDisks == -1)
+                break;
+
             // Solve puzzle
             System.out.println("Solving puzzle for " + numberOfDisks + " disks starting from Peg A.");
             moves = solveHanoiPuzzle(numberOfDisks, 'A', 'C', 'B', 0);
             System.out.println("Puzzle solved in " + moves + " moves.");
 
-        }
+        } // end of user input loop
+
+        keyboard.close();
+        System.out.print("Goodbye!");
     }
 
     public static int solveHanoiPuzzle(int disksToMove, char fromPeg, char toPeg, char intermediatePeg, int moves) {

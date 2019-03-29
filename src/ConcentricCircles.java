@@ -1,19 +1,20 @@
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JFrame;
+import java.awt.Color;
+import java.awt.Graphics;
 
 public class ConcentricCircles extends JFrame {
 
     public static final String TITLE = "Circle in Square";
     public static final int WIDTH = 620, HEIGHT = 340;
-    public static final int OUTTER_DIAMETER = 255;
+    public static final int OUTER_DIAMETER = 255;
     public static final int LEFT_CENTER_X = 150;
     public static final int RIGHT_CENTER_X = 450;
     public static final int CENTER_Y = 175;
 
     public void paint(Graphics canvas) {
 
-        drawLinearConcentricCircles(canvas, LEFT_CENTER_X, CENTER_Y, OUTTER_DIAMETER);
-        drawExponentialConcentricCircles(canvas, RIGHT_CENTER_X, CENTER_Y, OUTTER_DIAMETER);
+        drawLinearConcentricCircles(canvas, LEFT_CENTER_X, CENTER_Y, OUTER_DIAMETER);
+        drawExponentialConcentricCircles(canvas, RIGHT_CENTER_X, CENTER_Y, OUTER_DIAMETER);
 
     }
 

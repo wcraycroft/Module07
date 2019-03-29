@@ -13,8 +13,12 @@ public class DecimalToBinary {
         // User input loop
         while (true) {
             // Prompt user for base 10 integer
-            System.out.print("Please enter a positive whole number: ");
+            System.out.print("Please enter a positive whole number (-1 to quit): ");
             inputNumber = keyboard.nextInt();
+
+            // Check for exit prompt
+            if (inputNumber == -1)
+                break;
 
             // Calculate and output binary number recursively
             System.out.println(inputNumber + " in binary (recursive method): " + recursiveToBinary(inputNumber, ""));
@@ -22,6 +26,8 @@ public class DecimalToBinary {
             System.out.println(inputNumber + " in binary (iterative method): " + iterativeToBinary(inputNumber));
 
         }
+        keyboard.close();
+        System.out.print("Goodbye!");
 
     }
 

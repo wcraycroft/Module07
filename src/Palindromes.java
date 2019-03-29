@@ -14,6 +14,7 @@ public class Palindromes {
             System.out.print("Enter a word, phrase or sentence (or 'quit' to exit): ");
             input = keyboard.nextLine();
 
+            // Check for exit prompt
             if (input.equalsIgnoreCase("quit"))
                 break;
 
@@ -33,9 +34,10 @@ public class Palindromes {
             System.out.printf("\"%s\" is%s a palindrome (iterative method used).\n\n", input,
                     iterativeTestPalindrome(modified) ? "" : " not");
 
-            //System.out.println(modified);
-
         } // end of input loop
+
+        keyboard.close();
+        System.out.print("Goodbye!");
     }
 
     // This recursive method returns True if the input String is a Palindrome (reads forwards and backwards)

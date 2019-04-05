@@ -62,6 +62,7 @@ public class LoanPayoff {
 
     }
 
+    // Recursive method which calculates how many months remain given the passed loan data.
     public static int monthsToPayoff(double outstandingBalance, double annualInterestRate, double monthlyPayment,
                                      double totalInterestPaid)
     {

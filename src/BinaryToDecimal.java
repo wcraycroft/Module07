@@ -40,8 +40,11 @@ public class BinaryToDecimal {
         // User input loop
         while (true) {
             // Prompt user for base 10 integer
-            System.out.print("Please enter a binary number: ");
+            System.out.print("Please enter a binary number ('quit' to exit): ");
             binaryInput = keyboard.nextLine();
+
+            if (binaryInput.equalsIgnoreCase("quit"))
+                break;
 
             // Calculate and output binary number recursively
             System.out.println(binaryInput + " in decimal (recursive method): " + recursiveToDecimal(0, binaryInput));

@@ -52,6 +52,7 @@ public class GCDCalculator {
 
     }
 
+    // Calculates the GCD of two passed integers using recursive method
     public static int recursivelyCalculateGCD(int numberA, int numberB) {
         // Base case, b = 0, a is the GCD
         if (numberB == 0)
@@ -60,15 +61,16 @@ public class GCDCalculator {
         // Otherwise return the GCD of b and a % b
         return recursivelyCalculateGCD(numberB, numberA % numberB);
     }
-
+    // Calculates the GCD of two passed integers using iterative method
     public static int iterativelyCalculateGCD(int numberA, int numberB) {
         int temp;
-
+        // Calculate and replace first number with remainder of a % b, until b is equal to 0
         while (numberB != 0) {
             temp = numberB;
             numberB = numberA % numberB;
             numberA = temp;
         }
+        // When b = 0, return A as GCD
         return numberA;
     }
 }

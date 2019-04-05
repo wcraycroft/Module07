@@ -2,21 +2,18 @@
  * Author:  William Craycroft
  * Module:  7
  * Project: Homework 7, Project 3
- * Problem Statement: This program uses a recursive method to calculate the time in months it will take to pay off a loan.
+ * Problem Statement: This program uses a recursive method to solve a Tower of Hanoi puzzle. It also tracks the total
+ *      number of moves it takes this program to solve the puzzle.
  *
  * Algorithm / Plan:
- *      1. Print values for first test case
- *      2. Recursively calculate the months until payoff
- *          Instantiate months counter and total interest sum
- *          If outstanding balance <= 0, return months
- *          Calculate monthly interest amount = annual rate / 12 * loan amount
- *          If monthly interest amount > monthly payment, return -1 and display negative amortization error message
- *          Increment months by 1
- *          Calculate new outstanding balance = balance + interest amount - monthly payment
- *          Add monthly interest to sum
- *          Call method recursively with new outstanding balance
- *      3. Output formatted loan information to user.
- *      4. Repeat step 1 - 3 for test cases 2 and 3.
+ *      1. Prompt user for number of discs
+ *      2. Recursively move a number of discs from source (from) peg, to target (to), using an intermediate peg as necessary.
+ *          If the number of disks need to move equals zero, return the number of moves
+ *          Call method recursively with the same from peg, but swapping the intermediate and to peg. Decrement disks to move by 1.
+ *          Print the current move to the user
+ *          Call method recursively with the same to peg, but swapping the intermediate and from peg. Decrement disks to move by 1.
+ *          Return the number of moves made
+ *      3. Print the total number of moves made by the program.
  */
 
 import java.util.Scanner;
@@ -33,8 +30,8 @@ public class TowerOfHanoi {
 
         // User input loop
         while (true) {
-            // Prompt user for base 10 integer
-            System.out.print("Enter a number of pegs (-1 to quit): ");
+            // Prompt user for number of discs
+            System.out.print("Enter a number of discs (-1 to quit): ");
             numberOfDisks = keyboard.nextInt();
 
             // Check for exit prompt
@@ -58,14 +55,14 @@ public class TowerOfHanoi {
         if (disksToMove == 0) {
             return moves;
         }
-        //
+        // Call method for 1 disc higher. Swap to and intermediate pegs
         moves = solveHanoiPuzzle(disksToMove - 1, fromPeg, intermediatePeg, toPeg, moves);
-        // Move current fromPeg to toPeg
+        // Print the current move to console
         System.out.println("Move disc " + disksToMove + " from peg " + fromPeg + " to peg " + toPeg);
         moves++;
-        //
+        // Call method for 1 disc higher. Swap intermediate and from pegs
         moves = solveHanoiPuzzle(disksToMove - 1, intermediatePeg, toPeg, fromPeg, moves);
-
+        // Return number of moves made.
         return moves;
     }
 }
